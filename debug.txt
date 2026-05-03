@@ -1,0 +1,46 @@
+VCD info: dumpfile tb_cache.vcd opened for output.
+  [DBG] t=5 state=0 hit=0 v=00 c=00 END=x Done=0 cnt=1
+  [DBG] t=15 state=0 hit=0 v=00 c=00 END=0 Done=0 cnt=1
+  [DBG] t=25 state=0 hit=0 v=00 c=00 END=0 Done=0 cnt=1
+=== Acesso 0: addr=22, esperado MISS ===
+  [DBG] t=35 state=6 hit=0 v=00 c=00 END=0 Done=0 cnt=1
+  [DBG] t=45 state=4 hit=0 v=00 c=00 END=0 Done=0 cnt=1
+  [DBG] t=55 state=2 hit=0 v=00 c=00 END=0 Done=0 cnt=0
+  [DBG] t=65 state=2 hit=0 v=00 c=00 END=0 Done=0 cnt=0
+  [DBG] t=75 state=2 hit=0 v=00 c=00 END=0 Done=0 cnt=0
+  [DBG] t=85 state=2 hit=0 v=00 c=00 END=0 Done=0 cnt=0
+  [DBG] t=95 state=2 hit=0 v=00 c=00 END=1 Done=0 cnt=0
+  [DBG] t=105 state=3 hit=0 v=00 c=00 END=0 Done=0 cnt=1
+  [DBG] t=115 state=0 hit=1 v=01 c=01 END=0 Done=0 cnt=1
+  [DBG] t=125 state=1 hit=1 v=01 c=01 END=0 Done=1 cnt=1
+-----------------------------------------------------
+Acesso #0  | Endereco=22 (10110) | TAG=2 LINHA=1 BLOCO=2
+  Resultado : HIT  -- dado ja estava na cache
+  Dado lido : x
+  P0: V=1 TAG=2 LRU=1 | P1: V=0 TAG=3 LRU=0
+=== Acesso 1: addr=26, esperado MISS ===
+  [DBG] t=135 state=0 hit=0 v=00 c=11 END=0 Done=0 cnt=1
+  [DBG] t=145 state=6 hit=0 v=00 c=11 END=0 Done=0 cnt=1
+  [DBG] t=155 state=4 hit=0 v=00 c=11 END=0 Done=0 cnt=1
+  [DBG] t=165 state=2 hit=0 v=00 c=11 END=0 Done=0 cnt=0
+  [DBG] t=175 state=2 hit=0 v=00 c=11 END=0 Done=0 cnt=0
+  [DBG] t=185 state=2 hit=0 v=00 c=11 END=0 Done=0 cnt=0
+  [DBG] t=195 state=2 hit=0 v=00 c=11 END=0 Done=0 cnt=0
+  [DBG] t=205 state=2 hit=0 v=00 c=11 END=1 Done=0 cnt=0
+  [DBG] t=215 state=3 hit=0 v=00 c=11 END=0 Done=0 cnt=1
+  [DBG] t=225 state=0 hit=1 v=01 c=11 END=0 Done=0 cnt=1
+-----------------------------------------------------
+Acesso #1  | Endereco=26 (11010) | TAG=3 LINHA=0 BLOCO=2
+  Resultado : HIT  -- dado ja estava na cache
+  Dado lido : x
+  P0: V=1 TAG=3 LRU=1 | P1: V=0 TAG=3 LRU=0
+  [DBG] t=235 state=1 hit=1 v=01 c=11 END=0 Done=1 cnt=1
+=== Acesso 2: addr=22, esperado HIT ===
+  [DBG] t=245 state=0 hit=1 v=01 c=01 END=0 Done=0 cnt=1
+  [DBG] t=255 state=1 hit=1 v=01 c=01 END=0 Done=1 cnt=1
+-----------------------------------------------------
+Acesso #2  | Endereco=22 (10110) | TAG=2 LINHA=1 BLOCO=2
+  Resultado : HIT  -- dado ja estava na cache
+  Dado lido : x
+  P0: V=1 TAG=2 LRU=0 | P1: V=0 TAG=3 LRU=1
+tb_cache.v:93: $finish called at 255 (1s)
